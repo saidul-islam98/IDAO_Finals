@@ -1,0 +1,18 @@
+# DOCKER COMMAND TO BUILD THE DOCKER IMAGE
+docker build -t sidao_docker .
+
+# DOCKER COMMAND TO RUN THE IMAGE
+docker run -it sidao_docker
+
+# ACTIVATE CONDA ENVIRONMENT
+source activate 
+
+# RUN PYTHON FILE
+python test.py
+
+# COPY THE PREDICTIONS.CSV FROM DOCKER CONTAINER TO HOST
+docker cp <containerId>:/file/path/within/container /host/path/target
+
+for example:
+docker cp cb9e18793e1c:./predictions.csv F:\\IDAO\\IDAO_2021\\predictions.csv
+ 
